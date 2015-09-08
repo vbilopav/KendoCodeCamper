@@ -1,0 +1,26 @@
+<div class="sticky-search fixed" #= attributes #>
+         
+    <span id="search-wrap">
+        <span id="input-select" class="fa fa-search close" onclick="javascript: $(this).next().select();"></span>
+        <input
+            id="search"
+            type="text"
+            class="input-lg k-input"
+            autofocus
+            placeholder="#= placeholder #" />    
+    </span>
+
+    <span id="pin" class="fa fa-thumb-tack" title="#= _._resx.core.unpin #"></span>
+
+    # if (!navigator.msie) { #
+    <span class="close" id="input-clear" onclick="javascript: $(this).prev().prev().find('input').val('').focus().trigger('input');">
+        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+    </span>
+    # } #
+
+    <div id="inner-filters">
+        #= inner #
+    </div>
+    
+    <div class="label label-info" id="info"></div>        
+</div>

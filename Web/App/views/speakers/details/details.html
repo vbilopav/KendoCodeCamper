@@ -1,0 +1,56 @@
+﻿<div>    
+    <div>
+        <h3 class="text-info">#: fullName #</h3>
+    </div>     
+
+    <div>
+        <div style="float: left">
+            <img src="#: imageSource #" alt="#: fullName #" />
+            <div><small class="text-info">#: fullName #</small></div>
+            <require id="ratings" src="ui/ratings" data-params="rating: #: avgRating #" />           
+        </div>
+        <div class="callout-info">            
+            <div id="bio" class="text-info">#= bio #</div>
+        </div>
+    </div>
+    
+    <br/>
+    <br/>
+    <br/>
+
+    <div>
+        <label class="label label-primary">#= _._resx.web.email #</label>
+        <a href="mailto:#: email #" title="#: email #">#= email #</a>
+    </div>
+    
+    <br/>
+    
+    <div>
+        <label class="label label-primary">#= _._resx.web.twitter #</label>
+        <a href="#: twitter #" title="#: twitter #">#= twitter #</a> 
+    </div>
+    
+    <br/>
+
+    <div>
+        <label class="label label-primary">#= _._resx.web.blog #</label>        
+        <a href="#: blog #" title="#: blog #">#= blog #</a>
+    </div>
+ 
+    <br/>
+    <br/>
+        
+    <div>              
+        <ul class="list-group">
+            # for (var i = 0; i < sessions.length; i++) { # 
+            <li class="list-group-item">
+                <span class="badge">#: sessions[i].from #</span>
+                <a href="/">#: sessions[i].title #</a>
+            </li>
+            # } #
+        </ul>
+    </div>
+    
+    <br />
+
+</div>

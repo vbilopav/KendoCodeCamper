@@ -1,0 +1,52 @@
+﻿<script type="text/javascript">
+    var
+        match,
+        pl = /\+/g,
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query = window.location.search.substring(1),
+        url = {};
+    while (match = search.exec(query)) url[decode(match[1])] = decode(match[2]);
+    var l = url.l || url.lang;
+    if (l === undefined || l === null)
+        l = "";
+    else
+        l = l.substring(0, 2);
+</script>   
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/Content/bootstrap.css" rel="stylesheet"/>
+    <link href="/Content/font-awesome.css" rel="stylesheet"/>
+    <link href="/Content/application.css" rel="stylesheet"/>    
+  </head>
+  <body>
+    <div id="applicationHost">      
+      <div id="loading" style="visibility:hidden; opacity:0; margin-top: 50px;">
+        <div class="fade in" style="  z-index: 99999; overflow: visible; color: #bbb; width: 100%; text-align: center;">                    
+            <span class="h2 fade in" style="z-index: 99999; overflow: visible; color: #bbb;  display: block;">          
+                Oops! Something went terribly wrong!
+            </span>          
+            <span class="fa fa-meh-o" style="font-size: 9em;"></span>             
+        </div>
+      </div>
+      <script type="text/javascript">
+          (
+            function () {
+                setTimeout(function () {
+                    var e = document.getElementById('loading');
+                    if (e) {
+                        e.setAttribute('style', 'visibility:visible; opacity:1; transition: opacity 2s ease-out; margin-top: 50px;');
+                        document.title = 'Oops! Something went terribly wrong!';
+                    }
+                }, 1000);
+            })()
+      </script>      
+    </div>
+  </body>
+</html>

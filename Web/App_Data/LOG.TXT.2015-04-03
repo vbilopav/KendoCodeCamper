@@ -1,0 +1,12 @@
+1. INFO  [1:en-US:en-US:] 2015-04-03 09:12:07,831 [KCCJS DEBUG] Infrastructure.Web.HttpApp.Application_Start 
+From: c:\Dev\KendoCodeCamper\KendoCodeCamper\Infrastructure\Infrastructure.Web\App\HttpApp.cs:line 72
+Request: NOT AVAILABLE
+Message: Application_Start
+
+
+2. INFO  [164:en-US:en-US:] 2015-04-03 13:10:19,057 [KCCJS DEBUG] Infrastructure.Web.HttpApp.Application_End 
+From: c:\Dev\KendoCodeCamper\KendoCodeCamper\Infrastructure\Infrastructure.Web\App\HttpApp.cs:line 87
+Request: NOT AVAILABLE
+Message: Application_End
+
+

@@ -1,0 +1,17 @@
+﻿<require
+    id="speakers-filter" 
+    src="ui/data-filter" 
+    data-params="placeholder: '#=_._resx.default.filterSpeakersMsg#'" /> 
+
+<div  id="speakers-list"
+    data-template="speaker-template"         
+    data-bind="source: speakers" 
+    data-auto-bind="false"          
+    class="results k-textbox k-widget">
+</div>
+
+<script type="text/x-kendo-tmpl" id="speaker-template">
+<a class="k-button" href="/\\#=_.url('/speakers/'+id)\\#" speakerId="\\#=id\\#">
+    <img src="\\#=imageSource\\#" alt="\\#=firstName\\# \\#=lastName\\# " /><div>\\#=firstName\\# \\#=lastName\\#</div></a>
+</script>
+
